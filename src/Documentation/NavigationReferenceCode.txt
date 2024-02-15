@@ -1,0 +1,69 @@
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+
+import Dashboard from '../screens/dashboard';
+
+const BottomTab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+const PerformanceTabNavigator = () => (
+  <BottomTab.Navigator>
+    <BottomTab.Screen name="AddPerformance" component={AddPerformance} />
+    <BottomTab.Screen name="GetPerformanceByStudent" component={GetPerformanceByStudent} />
+    <BottomTab.Screen name="GetPerformanceByClass" component={GetPerformanceByClass} />
+  </BottomTab.Navigator>
+);
+
+const StudentsTabNavigator = () => (
+  <BottomTab.Navigator>
+    <BottomTab.Screen name="AllStudents" component={AllStudents} />
+    <BottomTab.Screen name="EnrolledStudents" component={EnrolledStudents} />
+    <BottomTab.Screen name="FormerStudents" component={FormerStudents} />
+    <BottomTab.Screen name="ResultMasterStaff" component={ResultMasterStaff} />
+  </BottomTab.Navigator>
+);
+
+const AcademicTabNavigator = () => (
+  <BottomTab.Navigator>
+    <BottomTab.Screen name="Standard" component={Standard} />
+    <BottomTab.Screen name="Division" component={Division} />
+    <BottomTab.Screen name="Subjects" component={Subjects} />
+  </BottomTab.Navigator>
+);
+
+const AttendanceTabNavigator = () => (
+  <BottomTab.Navigator>
+    <BottomTab.Screen name="GenerateAttendance" component={GenerateAttendance} />
+    <BottomTab.Screen name="ViewAttendance" component={ViewAttendance} />
+    <BottomTab.Screen name="MonthwiseAttendance" component={MonthwiseAttendance} />
+  </BottomTab.Navigator>
+);
+
+const ResultTabNavigator = () => (
+  <BottomTab.Navigator>
+    <BottomTab.Screen name="ResultType" component={ResultType} />
+    <BottomTab.Screen name="ResultMasterAdmin" component={ResultMasterAdmin} />
+    <BottomTab.Screen name="ResultManagerAdmin" component={ResultManagerAdmin} />
+    <BottomTab.Screen name="Users" component={Users} />
+    <BottomTab.Screen name="Designation" component={Designation} />
+  </BottomTab.Navigator>
+);
+
+const MainNavigator = () => {
+  return (
+    <NavigationContainer>
+      <BottomTab.Navigator>
+        <BottomTab.Screen name="Dashboard" component={Dashboard} />
+        <BottomTab.Screen name="Performance" component={PerformanceTabNavigator} />
+        <BottomTab.Screen name="Students" component={StudentsTabNavigator} />
+        <BottomTab.Screen name="Academic" component={AcademicTabNavigator} />
+        <BottomTab.Screen name="Attendance" component={AttendanceTabNavigator} />
+        <BottomTab.Screen name="Result" component={ResultTabNavigator} />
+      </BottomTab.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default MainNavigator;

@@ -1,0 +1,72 @@
+import React from 'react';
+import {StyleSheet, View, ActivityIndicator, Text} from 'react-native';
+import {
+  moderateVerticalScale,
+  scale,
+  verticalScale,
+} from '../libraries/scaling';
+import {OverlayColor, ProgressColor} from '../constants/constants';
+
+const Loader = ({
+  size = 'large',
+  isVisible = false,
+  message = 'Loading...',
+  boxColor = ProgressColor.White,
+  overlayColor = OverlayColor.Level1,
+}) => {
+  if (!isVisible) {
+    return null;
+  }
+  let ActivityColor;
+  if (boxColor === ProgressColor.White) {
+    ActivityColor = 'red';
+  } else {
+    ActivityColor = 'white';
+  }
+  let ActivityTextColor;
+  if (boxColor === ProgressColor.White) {
+    ActivityTextColor = '#284b63';
+  } else {
+    ActivityTextColor = 'white';
+  }
+
+  const styles = StyleSheet.create({
+    overlay: {
+      ...StyleSheet.absoluteFillObject,
+      backgroundColor: `rgba(0, 0, 0, ${overlayColor})`,
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1,
+    },
+    loadingBox: {
+      width: scale(90),
+      height: verticalScale(85),
+      borderRadius: 16,
+      backgroundColor: boxColor,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  });
+
+  return (
+    <View style={styles.overlay}>
+      <View style={styles.loadingBox}>
+        <ActivityIndicator size={size} color={ActivityColor} />
+        {message != '' && (
+          <Text
+            style={{
+              alignSelf: 'center',
+              color: ActivityTextColor,
+              fontSize: 12,
+              fontWeight: '600',
+              marginTop: moderateVerticalScale(6),
+            }}>
+            {message}
+          </Text>
+        )}
+      </View>
+    </View>
+  );
+};
+
+export default Loader;

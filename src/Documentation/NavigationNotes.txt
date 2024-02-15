@@ -1,0 +1,36 @@
+Main
+Home Screen
+BottomMainNavigator :
+
+1)Performance
+2)Students
+3)Academic
+4)Attendance
+5)Result Reserved For Admin
+
+Nested Bottom Navigators
+========================
+1) Performance
+	a) Add performance
+	b) Get Performance By Student
+	c) Get Performance By Class
+2) Students
+	a) All Students
+	b) Enrolled Students
+	c) Former Students
+	d) Result Master Staff
+3) Academic Structure
+	a) Standard
+	b) Division
+	c) Subjects
+4) Attendance
+    a) Generate
+    b) View
+    c) Monthwise
+5) Result
+	a) Result Type
+	b) Result Master Admin
+	c) Result Manager Admin
+	d) Users (Crud Operation View,Add,Edit and Delete)
+	e) Designation (Crud Operation View,Add,Edit and Delete)
+

@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Cabin-Bold.ttf",
+      "sha1": "46ae5c35cdc3e34849350499a071ac6dd2a5859d"
+    },
+    {
+      "path": "assets/fonts/Cabin-BoldItalic.ttf",
+      "sha1": "e49dcfbfd08cd7c3e1b11e712a387c2126c0f21c"
+    },
+    {
+      "path": "assets/fonts/Cabin-SemiBold.ttf",
+      "sha1": "4c116f809c879da146ecd982898ca0296872b8c6"
+    },
+    {
+      "path": "assets/fonts/Cabin-SemiBoldItalic.ttf",
+      "sha1": "1de6b725695d380bdd8bf3951f9b2d7d2f11751a"
+    }
+  ]
+}
