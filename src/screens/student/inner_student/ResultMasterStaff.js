@@ -1,12 +1,12 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import {View, Text} from 'react-native';
+import React from 'react';
 
 const ResultMasterStaff = () => {
   return (
     <View>
       <Text>ResultMasterStaff</Text>
     </View>
-  )
-}
+  );
+};
 
-export default ResultMasterStaff
+export default ResultMasterStaff;

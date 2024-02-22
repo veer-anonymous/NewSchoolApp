@@ -52,7 +52,7 @@ const style = StyleSheet.create({
     height: verticalScale(100),
     backgroundColor: ANDROID_THIME_COLOR,
     position: 'absolute',
-    bottom: 0,
+    top: 0,
     justifyContent: 'space-evenly',
     alignItems: 'center',
     flexDirection: 'row',

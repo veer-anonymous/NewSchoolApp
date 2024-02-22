@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const ViewAttendence = () => {
+const SceenGet = () => {
   return (
     <View>
-      <Text>ViewAttendence</Text>
+      <Text>SceenGet</Text>
     </View>
   );
 };
 
-export default ViewAttendence;
+export default SceenGet;

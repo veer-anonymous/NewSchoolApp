@@ -73,7 +73,7 @@ const Splash = () => {
 
       checkToken();
     }, 3000);
-  }, []);
+  });
 
   return (
     <SafeAreaView style={styles.container}>

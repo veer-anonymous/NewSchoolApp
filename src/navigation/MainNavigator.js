@@ -5,13 +5,16 @@ import Login from '../screens/Login';
 import Dashboard from '../screens/dashboard';
 import Splash from '../screens/Splash';
 import Home from '../screens/home/Home';
+import BottomNavigatorComponent from '../components/bottomnavigator/BottomNavigatorComponent';
+import {View, Text} from 'react-native';
+import {THEME_COLOR} from '../utils/colors';
 
 const Stack = createStackNavigator();
 const MainNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen
+        <Stack.Screen
           name="Splash"
           component={Splash}
           options={{headerShown: false, gestureEnabled: false}}
@@ -29,7 +32,7 @@ const MainNavigator = () => {
             gestureEnabled: false,
             animationEnabled: false,
           }}
-        /> */}
+        />
         <Stack.Screen
           name="Home"
           component={Home}
